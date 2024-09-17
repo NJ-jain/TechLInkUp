@@ -11,8 +11,8 @@ const Home = () => {
   return (
     <div>
       <Header />
-      <Core />
       <AboutUs />
+      <Core />
       <Requirements />
       <Testemonials />
       <Contacts />

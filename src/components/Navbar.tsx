@@ -4,10 +4,10 @@ import Logo from ".././assets/Logotipo-h.svg";
 
 const Navigation = [
   {name: "Home", href: "hero"},
-  {name: "Sobre-nós", href: "about"},
-  {name: "Requisitos", href: "requirements"},
-  {name: "Depoimentos", href: "testemonials"},
-  {name: "Contactos", href: "contacts"},
+  {name: "About Us", href: "about"},
+  {name: "Services", href: "requirements"},
+  {name: "Industries", href: "industries"},
+  {name: "Contact ", href: "contacts"},
 ]
 
 const Navbar = () => {

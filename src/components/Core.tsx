@@ -1,17 +1,21 @@
-import Snap from ".././assets/snap.svg";
-import Support from ".././assets/customer-support.svg";
-import Credit from ".././assets/wallet.svg";
+import Consultation from ".././assets/consultation.svg";
+import Strategy from ".././assets/strategy.svg";
+import Development from ".././assets/development.svg";
+import Implementation from ".././assets/implementation.svg";
+import Support from ".././assets/support.svg";
 
 const Core = () => {
   return (
     <div className="max-w-5xl mx-auto py-12 sm:py-24 px-4 sm:px-6 lg:px-8 bg-white">
-      <div className="flex flex-col sm:flex-row justify-between gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {[
-          { icon: Snap, title: "Garantias mais simples" },
-          { icon: Support, title: "Atendimento personalizado" },
-          { icon: Credit, title: "Credito flexivel" },
+          { icon: Consultation, title: "Consultation", description: "In-depth analysis of your business challenges and goals." },
+          { icon: Strategy, title: "Strategy", description: "Customized solution design based on your needs." },
+          { icon: Development, title: "Development", description: "Agile methodology for iterative feedback and development." },
+          { icon: Implementation, title: "Implementation", description: "Smooth deployment with minimal disruption to your operations." },
+          { icon: Support, title: "Support", description: "Continuous post-launch support and optimization." },
         ].map((item, index) => (
-          <div key={index} className="flex flex-col sm:flex-row items-start sm:items-center gap-4 w-full sm:w-1/3 relative pb-8 group">
+          <div key={index} className="flex flex-col items-center text-center gap-4 w-full relative pb-8 group">
             <img
               src={item.icon}
               alt={item.title}
@@ -22,7 +26,7 @@ const Core = () => {
                 {item.title}
               </h4>
               <span className="leading-tight text-zinc-800 text-base">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt suscipit repellat iure.
+                {item.description}
               </span>
             </div>
             <span className="bg-zinc-300 w-full h-[2px] absolute bottom-0">
@@ -35,4 +39,4 @@ const Core = () => {
   )
 }
 
-export {Core};
+export { Core };

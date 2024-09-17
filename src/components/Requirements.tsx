@@ -1,4 +1,14 @@
-import id from "../assets/id.svg";
+import softwareDevelopment from "../assets/software-development.svg";
+import web from "../assets/web-development.svg";
+import mobile from "../assets/mobile-app.svg";
+import cloud from "../assets/cloud-backup.svg";
+import api from "../assets/api.svg"
+import database from "../assets/database.svg"
+import devops from "../assets/devops.svg"
+import ui from "../assets/ui-ux.svg"
+import it from "../assets/it.svg"
+import security from "../assets/security.svg"
+import digital from "../assets/digital.svg"
 
 const Requirements = () => {
   return (
@@ -7,25 +17,31 @@ const Requirements = () => {
 
       <div className="max-w-5xl w-full mx-auto px-4 relative z-10">
         <h4 className="text-yellowLogo text-center text-2xl md:text-3xl font-medium mb-8 md:mb-12">
-          Requisitos
+          Our Services
         </h4>
 
-        <div className="flex flex-col md:flex-row justify-between items-center gap-8 md:gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {[
-            { title: "Cópia do BI", description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, nemo?" },
-            { title: "Cópia do BI da testemunha", description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, nemo?" },
-            { title: "Factura de água ou energia", description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, nemo?" },
+            {icon:  softwareDevelopment, title: "Custom Software Development", description: "Tailored software solutions to meet your business needs using modern technologies. Specialization in web, mobile, and cloud-based applications." },
+            {icon:  web, title: "Web Development", description: "Full-stack development services for building responsive, user-friendly websites and web applications. Expertise in React, NextJS, NodeJS, and Golang." },
+            {icon:  mobile, title: "Mobile App Development", description: "Development of iOS and Android apps using React Native. Cross-platform mobile solutions with high performance and user experience." },
+            {icon:  cloud, title: "Cloud Consulting & Migration", description: "Assistance in migrating applications to the cloud, with expertise in AWS, Azure, and Google Cloud. Cloud architecture design, deployment, and maintenance." },
+            {icon:  api, title: "API Development & Integration", description: "RESTful API development using Golang, NodeJS, and other frameworks. Integration of third-party services and APIs to enhance business functionalities." },
+            {icon:  database, title: "Database Management & Optimization", description: "Design, implementation, and optimization of relational databases like MySQL and PostgreSQL. Performance tuning for high availability and scalability." },
+            {icon:  devops, title: "DevOps & Automation", description: "DevOps services to automate workflows and infrastructure deployment using Docker, Kubernetes, and CI/CD pipelines. Monitoring and optimization of cloud infrastructure." },
+            {icon:  ui, title: "UI/UX Design", description: "Designing intuitive, user-friendly interfaces for web and mobile applications. Emphasis on improving user experience and engagement." },
+            {icon:  it, title: "IT Strategy & Consulting", description: "Helping businesses develop IT strategies to align with their goals. Offering guidance on technology selection, system integration, and future-proofing business operations." },
+            {icon:  security, title: "Security & Compliance", description: "Implementation of best practices in data security, encryption, and compliance with industry standards. Regular audits and vulnerability assessments." },
+            {icon:  digital, title: "Digital Transformation", description: "Assisting businesses in transitioning from legacy systems to modern, digital-first solutions. Automating workflows and optimizing business operations using new technologies." },
           ].map((item, index) => (
-            <div key={index} className="flex flex-col items-center w-full md:w-72">
+            <div key={index} className="bg-transparent border border-white rounded-lg p-6 text-center flex flex-col items-center">
               <img
-                src={id}
-                alt="BI"
-                className="w-14 h-14 !fill-white mb-4"
+                src={item.icon}
+                alt="Service Icon"
+                className="w-14 h-14 mb-4"
               />
-              <div className="text-center">
-                <h2 className="font-medium text-yellowLogo leading-tight mb-2">{item.title}</h2>
-                <span className="text-zinc-200 leading-tight text-sm">{item.description}</span>
-              </div>
+              <h2 className="font-medium text-greenLogo text-xl mb-2">{item.title}</h2>
+              <p className="text-zinc-200 text-base">{item.description}</p>
             </div>
           ))}
         </div>
