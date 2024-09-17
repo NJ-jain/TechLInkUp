@@ -69,3 +69,6 @@ const AboutUs = () => {
     </div>
   )
 }
+
+
+export { AboutUs };
