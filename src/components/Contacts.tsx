@@ -20,5 +20,5 @@ const Contacts = () => {
     </div>
   );
 };
-
+ 
 export { Contacts };
