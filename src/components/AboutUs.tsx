@@ -24,7 +24,7 @@ const AboutUs = () => {
 
             <h2 className="font-medium text-2xl sm:text-3xl text-greenLogo mb-4">About Us</h2>
             <p className="text-zinc-600">
-              At [Your Company Name], we specialize in delivering comprehensive IT solutions that help businesses thrive in today’s digital landscape. Our services include custom software development, cloud migration, API integrations, and cutting-edge web and mobile applications.
+              At Tech Link Up, we specialize in delivering comprehensive IT solutions that help businesses thrive in today’s digital landscape. Our services include custom software development, cloud migration, API integrations, and cutting-edge web and mobile applications.
 
               <ul className="mt-4 space-y-2">
                 <li className="flex items-center">
