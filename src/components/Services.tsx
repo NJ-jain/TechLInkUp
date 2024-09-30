@@ -111,7 +111,7 @@ const Services = () => {
   };
 
   return (
-    <div className="w-full py-16 bg-zinc-100/50" id="Services">
+    <div className="w-full py-16 bg-zinc-100/50" id="services">
       <div className="max-w-5xl w-full mx-auto px-4">
         <h4 className="text-greenLogo text-center text-2xl md:text-3xl font-medium mb-8">Our Services</h4>
         <div className="space-y-4">

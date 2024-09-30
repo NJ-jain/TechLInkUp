@@ -5,7 +5,7 @@ import Logo from ".././assets/Logotipo-h.svg";
 const Navigation = [
   {name: "Home", href: "hero"},
   {name: "About Us", href: "about"},
-  {name: "Services", href: "requirements"},
+  {name: "Services", href: "services"},
   {name: "Industries", href: "industries"},
   {name: "Contact ", href: "contacts"},
 ]
