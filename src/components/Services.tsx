@@ -104,7 +104,7 @@ const servicesData = [
 ];
 
 const Services = () => {
-  const [activeIndex, setActiveIndex] = useState<number | null>(null); // Specify type here
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   const toggleAccordion = (index: number) => {
     setActiveIndex(activeIndex === index ? null : index);
@@ -116,14 +116,18 @@ const Services = () => {
         <h4 className="text-greenLogo text-center text-2xl md:text-3xl font-medium mb-8">Our Services</h4>
         <div className="space-y-4">
           {servicesData.map((item, index) => (
-            <div key={index} className="border border-zinc-800 rounded-lg">
+            <div key={index} className="rounded-lg overflow-hidden">
               <button
                 onClick={() => toggleAccordion(index)}
-                className="w-full flex justify-between items-center p-4 text-left"
+                className={`w-full flex justify-between items-center p-4 text-left ${
+                  index % 2 === 0
+                    ? 'bg-yellow-400 text-black'
+                    : 'bg-green-600 text-white'
+                }`}
               >
                 <div className="flex items-center space-x-4">
                   <img src={item.icon} alt="Service Icon" className="w-10 h-10" />
-                  <h2 className="font-medium text-greenLogo text-lg">{item.title}</h2>
+                  <h2 className="font-medium text-lg">{item.title}</h2>
                 </div>
                 <svg
                   className={`w-6 h-6 transition-transform transform ${

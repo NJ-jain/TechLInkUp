@@ -49,15 +49,14 @@ const Industries = () => {
           pagination={{
             clickable: true,
           }}
-          // navigation={true}
           modules={[Autoplay, Pagination, Navigation]}
           className="mySwiper"
         >
           {industriesData.map((item, index) => (
-            <SwiperSlide key={index} className="h-full"> {/* Added h-full to make all slides the same height */}
-              <div className="bg-transparent border border-white rounded-lg p-6 text-center flex flex-col items-center justify-between h-full"> {/* Added justify-between */}
+            <SwiperSlide key={index} className="h-auto"> {/* Changed to h-auto */}
+              <div className="bg-transparent border border-white rounded-lg p-6 text-center flex flex-col h-full"> {/* Removed items-center and justify-between */}
                 <span className="text-center text-yellowLogo font-medium text-xl mb-2">{item.title}</span>
-                <span className="text-zinc-200 text-sm">{item.description}</span>
+                <span className="text-zinc-200 text-sm flex-grow">{item.description}</span> {/* Added flex-grow */}
               </div>
             </SwiperSlide>
           ))}

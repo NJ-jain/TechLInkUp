@@ -4,7 +4,7 @@ import Logo from ".././assets/Logotipo-h.svg";
 
 const Navigation = [
   {name: "Home", href: "hero"},
-  {name: "About Us", href: "about"},
+  // {name: "About Us", href: "about"},
   {name: "Services", href: "services"},
   {name: "Industries", href: "industries"},
   {name: "Contact ", href: "contacts"},
@@ -65,7 +65,7 @@ const Navbar = () => {
         </button>
 
         <div
-          className={`${isOpen ? 'block' : 'hidden'} w-full lg:flex lg:items-center lg:w-auto mt-4 lg:mt-0`}
+          className={`${isOpen ? 'block' : 'hidden'} w-full lg:flex lg:items-center lg:w-auto mt-4 lg:mt-0 cursor-pointer`}
         >
           {Navigation.map((item, i) => (
             <Link

@@ -1,6 +1,11 @@
 import Logo from "../assets/logo-v.svg";
 
 const Contacts = () => {
+  const handleEmailClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    window.location.href = "mailto:techlinkupsolutions@gmail.com";
+  };
+
   return (
     <div className="w-full py-10 sm:py-20" id="contacts">
       <div className="max-w-5xl w-full mx-auto px-4 sm:px-6 lg:px-8">
@@ -10,9 +15,12 @@ const Contacts = () => {
           <div className="mt-6 sm:mt-8 w-full flex justify-center">
             <div className="text-center">
               <h4 className="text-greenLogo font-semibold text-xl mb-4">Email:</h4>
-              <a href="mailto:techlinkupsolutions@gmail.com" className="text-zinc-600 text-lg underline">
+              <p
+                onClick={handleEmailClick}
+                className="text-zinc-600 text-lg cursor-pointer hover:text-greenLogo transition-colors duration-300"
+              >
                 techlinkupsolutions@gmail.com
-              </a>
+              </p>
             </div>
           </div>
         </div>
@@ -20,5 +28,5 @@ const Contacts = () => {
     </div>
   );
 };
- 
+
 export { Contacts };
