@@ -111,26 +111,26 @@ const Services = () => {
   };
 
   return (
-    <div className="w-full py-16 bg-zinc-100/50" id="services">
-      <div className="max-w-5xl w-full mx-auto px-4">
-        <h4 className="text-greenLogo text-center text-2xl md:text-3xl font-medium mb-8">Our Services</h4>
-        <div className="space-y-4">
+    <div className="w-full py-8 sm:py-12 md:py-16 bg-zinc-100/50" id="services">
+      <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8">
+        <h4 className="text-greenLogo text-center text-xl sm:text-2xl md:text-3xl font-medium mb-6 sm:mb-8">Our Services</h4>
+        <div className="space-y-3 sm:space-y-4">
           {servicesData.map((item, index) => (
-            <div key={index} className="rounded-lg overflow-hidden">
+            <div key={index} className="rounded-lg overflow-hidden shadow-md">
               <button
                 onClick={() => toggleAccordion(index)}
-                className={`w-full flex justify-between items-center p-4 text-left ${
+                className={`w-full flex justify-between items-center p-3 sm:p-4 text-left ${
                   index % 2 === 0
                     ? 'bg-yellow-400 text-black'
                     : 'bg-green-600 text-white'
                 }`}
               >
-                <div className="flex items-center space-x-4">
-                  <img src={item.icon} alt="Service Icon" className="w-10 h-10" />
-                  <h2 className="font-medium text-lg">{item.title}</h2>
+                <div className="flex items-center space-x-2 sm:space-x-4">
+                  <img src={item.icon} alt="Service Icon" className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10" />
+                  <h2 className="font-medium text-sm sm:text-base md:text-lg">{item.title}</h2>
                 </div>
                 <svg
-                  className={`w-6 h-6 transition-transform transform ${
+                  className={`w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 transition-transform transform ${
                     activeIndex === index ? 'rotate-180' : ''
                   }`}
                   xmlns="http://www.w3.org/2000/svg"
@@ -147,8 +147,8 @@ const Services = () => {
                 </svg>
               </button>
               {activeIndex === index && (
-                <div className="p-4 bg-white">
-                  <p className="text-zinc-800">{item.description}</p>
+                <div className="p-3 sm:p-4 bg-white">
+                  <p className="text-zinc-800 text-sm sm:text-base">{item.description}</p>
                 </div>
               )}
             </div>

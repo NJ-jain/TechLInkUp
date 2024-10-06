@@ -1,13 +1,8 @@
 import React from 'react';
-// Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-
-// Import required modules
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
 const Industries = () => {
@@ -30,8 +25,8 @@ const Industries = () => {
   ];
 
   return (
-    <div className="w-full min-h-[350px] bg-banner2 bg-cover bg-center bg-fixed relative py-12" id="industries">
-      <span className="absolute left-0 top-0 w-full h-full bg-black/60 z-0"/>
+    <div className="w-full min-h-[400px] bg-banner2 bg-cover bg-center bg-fixed relative py-12" id="industries">
+      <span className="absolute left-0 top-0 w-full h-full bg-black/60 z-0" />
 
       <div className="max-w-5xl w-full mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <h4 className="text-yellowLogo font-medium text-2xl sm:text-3xl text-center mb-8 sm:mb-12">
@@ -39,9 +34,8 @@ const Industries = () => {
         </h4>
 
         <Swiper
-          slidesPerView={3}  
-          spaceBetween={30}   
-          centeredSlides={false}
+          spaceBetween={30}
+          loop={true} // Enables infinite looping
           autoplay={{
             delay: 2500,
             disableOnInteraction: false,
@@ -51,12 +45,25 @@ const Industries = () => {
           }}
           modules={[Autoplay, Pagination, Navigation]}
           className="mySwiper"
+          breakpoints={{
+            640: {
+              slidesPerView: 1, // Mobile
+              height: 400, // Increased height for mobile
+            },
+            768: {
+              slidesPerView: 2, // Tablet
+              height: 400, // Height for tablet
+            },
+            1024: {
+              slidesPerView: 3, // Desktop
+            },
+          }}
         >
           {industriesData.map((item, index) => (
-            <SwiperSlide key={index} className="h-auto"> {/* Changed to h-auto */}
-              <div className="bg-transparent border border-white rounded-lg p-6 text-center flex flex-col h-full"> {/* Removed items-center and justify-between */}
+            <SwiperSlide key={index} className="h-auto">
+              <div className="bg-transparent border border-white rounded-lg p-6 text-center flex flex-col h-full">
                 <span className="text-center text-yellowLogo font-medium text-xl mb-2">{item.title}</span>
-                <span className="text-zinc-200 text-sm flex-grow">{item.description}</span> {/* Added flex-grow */}
+                <span className="text-zinc-200 text-sm flex-grow">{item.description}</span>
               </div>
             </SwiperSlide>
           ))}
