@@ -15,12 +15,13 @@ const Contacts = () => {
           <div className="mt-4 sm:mt-6 md:mt-8 lg:mt-10 w-full flex justify-center">
             <div className="text-center">
               <h4 className="text-greenLogo font-semibold text-lg sm:text-xl md:text-2xl mb-2 sm:mb-3 md:mb-4">Email:</h4>
-              <p
+              <a
+                href="mailto:techlinkupsolutions@gmail.com"
                 onClick={handleEmailClick}
                 className="text-zinc-600 text-base sm:text-lg md:text-xl cursor-pointer hover:text-greenLogo transition-colors duration-300"
               >
                 techlinkupsolutions@gmail.com
-              </p>
+              </a>
             </div>
           </div>
         </div>
