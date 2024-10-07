@@ -52,7 +52,6 @@ const Navbar = () => {
         <div
           className="font-bold text-white"
         >
-          {/* <img src={Logo} alt="logotipo" className="w-28 sm:w-32 md:w-40"/> */}
           <svg 
             width="395.99999999999994" 
             height="193.2632909738124" 
